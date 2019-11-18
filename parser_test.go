@@ -1,7 +1,12 @@
 package understat
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
-func TestGetLeagueFixtures(t *testing.T) {
-	GetLeagueFixtures("EPL", "2019")
+func TestGetLeagueFixturesNow(t *testing.T) {
+	fix, _ := GetLeagueFixtures("EPL", "2019")
+
+	fmt.Printf("Fixtures: %+v", fix)
 }
