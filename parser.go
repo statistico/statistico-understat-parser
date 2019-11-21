@@ -4,10 +4,8 @@ import (
 	"fmt"
 )
 
-const datesData = "datesData"
-
 func GetLeagueFixtures(league, season string) ([]Fixture, error) {
-	url := fmt.Sprintf(leagueUrl + "/%s/%s", league, season)
+	url := fmt.Sprintf(LeagueURL + "/%s/%s", league, season)
 
 	var response []Fixture
 
@@ -17,7 +15,7 @@ func GetLeagueFixtures(league, season string) ([]Fixture, error) {
 		return response, err
 	}
 
-	if err := parseStringMatch(body, datesData, &response); err != nil {
+	if err := parseStringMatch(body, "datesData", &response); err != nil {
 		return response, err
 	}
 

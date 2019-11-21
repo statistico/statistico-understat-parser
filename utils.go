@@ -10,10 +10,7 @@ import (
 	"strings"
 )
 
-var (
-	leagueUrl = "https://understat.com/league"
-	pattern = `\s+=\s+JSON.parse\(\'(.*?)\'\)`
-)
+var pattern = `\s+=\s+JSON.parse\(\'(.*?)\'\)`
 
 func newStringReplace(str string) (string, error) {
 	s := strings.Replace(str, " ", "", -1)
