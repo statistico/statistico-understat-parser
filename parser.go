@@ -5,7 +5,7 @@ import (
 )
 
 func GetLeagueFixtures(league, season string) ([]Fixture, error) {
-	url := fmt.Sprintf(LeagueURL + "/%s/%s", league, season)
+	url := fmt.Sprintf(LeagueURL+"/%s/%s", league, season)
 
 	var response []Fixture
 
