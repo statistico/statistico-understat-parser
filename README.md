@@ -1,1 +1,3 @@
-# statistico-understat-parser
+# Statistico Understat Parser
+
+***Under development***
