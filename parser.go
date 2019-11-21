@@ -3,9 +3,12 @@ package understat
 import (
 	"fmt"
 )
+type Parser struct {
+	BaseURL string
+}
 
-func GetLeagueFixtures(league, season string) ([]Fixture, error) {
-	url := fmt.Sprintf(LeagueURL+"/%s/%s", league, season)
+func (p Parser) GetLeagueFixtures(league, season string) ([]Fixture, error) {
+	url := fmt.Sprintf(p.BaseURL + "/%s/%s", league, season)
 
 	var response []Fixture
 
