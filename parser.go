@@ -7,8 +7,8 @@ type Parser struct {
 	BaseURL string
 }
 
-func (p Parser) GetLeagueFixtures(league, season string) ([]Fixture, error) {
-	url := fmt.Sprintf(p.BaseURL + "/%s/%s", league, season)
+func (p Parser) LeagueFixtures(league, season string) ([]Fixture, error) {
+	url := fmt.Sprintf(p.BaseURL + "/league/%s/%s", league, season)
 
 	var response []Fixture
 
